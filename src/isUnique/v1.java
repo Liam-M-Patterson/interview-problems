@@ -1,5 +1,3 @@
-package isUnique;
-
 public class v1 {
 	
 	boolean isUnique(String str) {
