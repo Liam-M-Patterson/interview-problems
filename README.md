@@ -1,6 +1,6 @@
 # interview-problems
 
-This a repository of common Data Structure & Algorithims questions that can be asked during techincal interviews for Software Development jobs. The questions in this repository are either referring to questions I've completed from Leetcode, or Cracking the Coding Interview 6th by Gayle Laakmann McDowell. Out of respect to both of these sources, I have not included the problem definition in this repository. If you wish to find the problem, you will likely be able to find it on google. 
+This a repository of common Data Structure & Algorithims questions that can be asked during techincal interviews for Software Development jobs. The questions in this repository are either referring to questions I've completed from Leetcode, or Cracking the Coding Interview 6th by Gayle Laakmann McDowell. This repository includes my best attempt at a solution, I am in no way trying to claim these are the most efficient solutions. Out of respect to both of these sources, I have not included the problem definition in this repository. If you wish to find the problem, you will likely be able to find it on google. 
 
 Copyright 2022 Liam Patterson
 
