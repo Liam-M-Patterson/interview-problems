@@ -2,7 +2,7 @@
 class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
-        self.next = next
+        self.next = nextpy
 class Solution:
     def removeNthFromEnd(self, head, n):
         
