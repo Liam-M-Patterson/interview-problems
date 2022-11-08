@@ -18,4 +18,3 @@ class Solution:
         # If we don't find any digit of '6', return the original number,
         # otherwise, increment 'num' by the difference made by the first '6'.
         return num if highest_six == -1 else num + 3 * 10 ** highest_six
-        
