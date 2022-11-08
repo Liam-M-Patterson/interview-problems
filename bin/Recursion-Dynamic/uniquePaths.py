@@ -29,7 +29,8 @@ class Solution:
         
         return numFromPos(0,0)
 
+if __name__ == "__main__":
+    
+    sol = Solution()
 
-sol = Solution()
-
-print(sol.uniquePaths(3, 7))
+    print(sol.uniquePaths(3, 7))
