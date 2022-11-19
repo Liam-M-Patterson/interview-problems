@@ -1,0 +1,56 @@
+# In a town, there are n people labeled from 1 to n. There is a rumor that one of these people is secretly the town judge.
+
+# If the town judge exists, then:
+
+# The town judge trusts nobody.
+# Everybody (except for the town judge) trusts the town judge.
+# There is exactly one person that satisfies properties 1 and 2.
+# You are given an array trust where trust[i] = [ai, bi] representing that the person labeled ai trusts the person labeled bi.
+
+# Return the label of the town judge if the town judge exists and can be identified, or return -1 otherwise. 
+
+# Example 1:
+# Input: n = 2, trust = [[1,2]]
+# Output: 2
+
+# Example 2:
+# Input: n = 3, trust = [[1,3],[2,3]]
+# Output: 3
+
+# Example 3:
+# Input: n = 3, trust = [[1,3],[2,3],[3,1]]
+# Output: -1
+
+class Solution:
+    def findJudge(self, n: int, trust) -> int:
+        
+        if trust == [] and n == 1:
+            return 1    
+
+        trusting = {}
+        # [x,y] x represents bool if they are trusting, y is number of people who trust them
+        for person in trust:
+
+            # determine if person is trusting
+            if person[0] not in trusting:
+                trusting[person[0]] = [True, 0]
+            else:
+                temp = trusting[person[0]]
+                temp[0] = True
+                trusting[person[0]] = temp
+            
+            # increment number of people who trusted them
+            if person[1] in trusting:
+                temp = trusting[person[1]]
+                temp[1] += 1 
+                trusting[person[1]] = temp
+            else:
+                trusting[person[1]] = [False, 1]
+        
+
+        for personID in trusting:
+            
+            judge = trusting[personID]
+            if judge[0] == False and judge[1] == n-1:
+                return personID
+        return -1
